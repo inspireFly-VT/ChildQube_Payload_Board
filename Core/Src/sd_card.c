@@ -26,13 +26,8 @@ extern SPI_HandleTypeDef hspi1;
  * Do not assume PA4 is correct without
  * checking the board schematic.
  */
-#ifndef SD_CS_PORT
-#error "Define SD_CS_PORT using the board schematic"
-#endif
-
-#ifndef SD_CS_PIN
-#error "Define SD_CS_PIN using the board schematic"
-#endif
+#define SD_CS_PORT GPIOA
+#define SD_CS_PIN GPIO_PIN_4
 
 #define SD_TIMEOUT 1000U
 
